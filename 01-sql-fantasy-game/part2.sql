@@ -13,7 +13,7 @@ WITH race_stats AS (
 SELECT race,
        user_count,
        with_transaction,
-       with_transaction::REAL / user_count AS unknown,
+       with_transaction::REAL / user_count AS buyers_share,
        payer_count::REAL / user_count AS conversion_rate,
        payer_count::REAL / with_transaction AS payer_share,
        total_transaction::REAL / with_transaction AS avg_per_buyer,
